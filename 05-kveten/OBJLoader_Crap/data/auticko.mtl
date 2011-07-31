@@ -1,0 +1,14 @@
+# Max2Mtl Version 4.0 Mar 10th, 2001
+#
+newmtl 03_-_Default
+Ka  0.988235 0.988235 0.988235
+Kd  0.588235 0.588235 0.588235
+Ks  0.900000 0.900000 0.900000
+d  1.000000
+Ns  1.000000
+illum 2
+#map_Ka sphere02completemap.png
+map_Kd sphere02completemap.png
+#map_Ks sphere02completemap.png
+#
+# EOF

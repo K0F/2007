@@ -1,0 +1,3 @@
+ -Xms45m -Xmx50m 
+ard_thermo_read_beta
+ard_thermo_read_beta.jar,core.jar,serial.jar,RXTXcomm.jar

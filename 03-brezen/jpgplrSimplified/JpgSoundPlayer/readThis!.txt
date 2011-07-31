@@ -1,0 +1,49 @@
+************************ //ver 0.2
+||    Jpg sound player by kof     ||
+************************
+
+Experimental application producing
+a midi synthesis signal from a picture
+source of any standart extensions.
+
+quickHelp:
+
+TO PLAY THE IMAGES DRAG AND
+DROP THEM ON AN APP SCREEN
+
+(you can also directly drag the pictures
+from your webBrowser etc.)
+
+Beware of using images with
+dimmensions greather than 
+2048 pix in X or Y:
+causes program crash at most
+of cases.
+
+Tested only on the winXp
+
+program won't run:
+
+Program will use the first device
+logged as an midi device.
+In most cases its "Microsoft midimapper"
+It is supported by AC 97 standarted
+soundcards.
+
+JVM 1.4.2+ must be installed on your
+computer before running app.
+
+Uses JOGL renderer 1.1
+-that means you have to have an
+OPENGL supported graphics card.
+
+If experiencing some problems
+or have any suggestions..
+
+
+//------------------------------>
+..contact me at email
+christOffOn@gmail.com 
+//------------------------------>
+
+enjoy!, Kof.

@@ -1,0 +1,15 @@
+void setup(){
+	size(200,200);
+	background(0);
+
+	//-----------------------* frame title
+	frame.setTitle(" :: krystof pesek");
+	//-----------------------*
+	frame.show();
+
+}
+void draw(){
+	background(0);
+	point(mouseX,mouseY);
+}
+

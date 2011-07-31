@@ -1,0 +1,102 @@
+/*
+import processing.opengl.*;
+import pitaru.sonia_v2_9.*;
+
+import processing.serial.*;
+Sample sample,beat;
+Serial port;
+// The serial port
+
+int res = 90;
+int thisByte = -1;  // Variable to hold keystoke values
+int whichKey = -1;  // Incoming serial data
+float q;
+int qant,soucet;
+float prum;
+PFont fontA;        // Font for printing
+float cnt =0;
+float minval = 255,maxval=0;
+int[] val = new int[1001];
+float[] liner = new float[2] ;
+void setup() {
+	size(800, 255,OPENGL);
+	frameRate(50);
+	frame.setTitle("diode ReaDer by kof");
+	// Load and prep fonts to print to window
+	setFullScreen( false );               // get fullscreen exclusive mode
+	setResolution( 800, 600 );           // change resolution to 640, 480
+	createFullScreenKeyBindings();       // let ctrl+f switch to window mode
+	fontA = loadFont("04b24-24.vlw");
+	textFont(fontA, 24);
+	cursor(CROSS);
+	// List all the available serial ports:
+	println(Serial.list());
+
+	// I know that the first port in the serial list on my mac
+	// is always my  Keyspan adaptor, so I open Serial.list()[0].
+	// In Windows, this usually opens COM1.
+	// Open whatever port is the one you're using.
+	port = new Serial(this, Serial.list()[2], 9600);
+
+	// send a capital A out the serial port:
+	Sonia.start(this,44100);
+	sample = new Sample("28390_kerouacsamerica_Chrl_Vox_WomenfestSFO.wav");
+	beat = new Sample("RnB130bpm.wav");
+	beat.play();
+	beat.repeat();
+	beat.setVolume(2);
+	sample.stop();
+	sample.setVolume(1.25);
+	println("");
+	println("READY TO GO!");
+
+	port.write(65);
+	background(0);
+}
+
+void draw() {
+	float koef = (maxval-minval)/10.0;
+
+	cnt+=0.05;
+	qant+=1;if(qant>res){qant=0;}
+	if(cnt>=width){cnt=0;background(0);}
+
+	noStroke();
+	val[qant] = thisByte;
+	liner[0] = prum;
+	soucet = 0;
+	for (int i =0;i<res;i++){
+		soucet += val[i];
+		prum = soucet/(res+1.0f);
+	}
+	//println((prum*12.0));
+	noSmooth();
+	stroke(25,255,25,80);
+	line(cnt,(950-(liner[1]*12.0)),cnt+1,(950-(liner[0]*12.0)));
+	stroke((liner[0]*12.0)-710,35);
+	line(cnt,0,cnt,10);
+	liner[1]=prum;
+	if (minval>=prum){minval = prum;}
+	if (maxval<=prum){maxval = prum;}
+
+	if(!sample.isPlaying()){sample.play(  abs( round(((liner[0]*12.0))*5000))    ,abs(round(((liner[0]*12.0))*5000)+round(mouseX*50)+1)     );}
+	
+	//println(liner[1]-55);
+	// If there are bytes available in the input buffer,
+	// Read them and print them:
+	while (port.available() > 0) {
+		thisByte = int(port.read());
+	}
+}
+
+void keyPressed() {
+	cnt=0;
+	background(0);
+}
+
+
+public void stop(){
+	Sonia.stop();
+	super.stop();
+}
+*/

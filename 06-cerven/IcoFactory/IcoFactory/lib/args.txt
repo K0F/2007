@@ -1,0 +1,3 @@
+ -Xms64m -Xmx300m 
+IcoFactory
+IcoFactory.jar,core.jar,controlP5.jar

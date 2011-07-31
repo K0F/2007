@@ -1,0 +1,80 @@
+
+class BOID {
+  float x;
+  float y;
+  float speedX=0.1,speedY=0.5;
+  float[] neighborsDist = new float[num];
+  float[] headings = new float[num]; 
+  
+  float direction;
+  float vliv = 200.0;
+  int ID;
+  boolean meet;
+
+  BOID(int id){
+    x =random(width);
+    y = random(height); 
+    speedX = random(-1.0,1.0);
+    speedY = random(-1.0,1.0);
+    ID = id;
+    vliv = random(5,200);
+  }
+
+  void drawMe(){
+
+    for(int i = 0;i<num;i++){
+      headings[i] = atan(speedY/speedX);
+      direction = headings[ID];
+      
+      if(ID!=i){
+        neighborsDist[i]=dist(a[i].x,a[i].y,this.x,this.y); 
+
+        //---------------------------> if another boid close to me
+        if(neighborsDist[i]<=vliv){
+          float factor = neighborsDist[i]/(vliv+0.001);
+         
+         //---------------------------> proxiate my speed
+         speedX += ((a[i].speedX)*(factor*0.0007));
+         speedY += ((a[i].speedY)*(factor*0.0007));
+         
+         
+         speedX = constrain(speedX,-1.1,1.1);
+         speedY = constrain(speedY,-1.1,1.1);
+         //---------------------------> and randomize
+         speedX += random(-0.04,0.04)*factor;
+         speedY += random(-0.04,0.04)*factor;
+    
+    meet = true;  
+      }
+      }
+    }//end For
+
+    //-----------------------------------------------------> movements
+    x += speedX;
+    y += speedY;
+    //-----------------------------------------------------> boundaries
+    if (x > width){x=0;}else if(x<0){x=width;}
+    if (y > height){y=0;}else if(y<0){y=height;}
+    //-----------------------------------------------------> drawings
+    pushMatrix();
+    translate(x,y);
+    rotate(direction);
+    translate(-x,-y);
+  
+    if(!meet){
+    noFill();
+    stroke(0,50);
+    }else{
+    fill(255,65,25,35);
+    stroke(0,50);
+    meet = false;
+  }
+    
+    rectMode(CENTER);
+    rect(x,y,20,2);
+    popMatrix();
+
+  }//end drawMe
+
+}//end Class
+

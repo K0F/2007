@@ -1,0 +1,3 @@
+ -Xms64m -Xmx300m 
+postava
+postava.jar,core.jar,opengl.jar,jogl.jar

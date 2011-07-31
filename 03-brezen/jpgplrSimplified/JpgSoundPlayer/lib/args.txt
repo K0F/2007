@@ -1,0 +1,3 @@
+ -Xms64m -Xmx300m 
+jpgplrSimplified
+jpgplrSimplified.jar,core.jar,opengl.jar,jogl.jar,controlP5.jar,promidi.jar

@@ -1,0 +1,3 @@
+ -Xms64m -Xmx256m 
+video_Re_c_orderCAM1
+video_Re_c_orderCAM1.jar,core.jar,moviemaker.jar,opengl.jar,jogl.jar,JMyron.jar

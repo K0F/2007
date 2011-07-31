@@ -1,0 +1,12 @@
+# Max2Mtl Version 4.0 Mar 10th, 2001
+#
+newmtl 07_-_Default
+Ka  0.988235 0.956863 0.909804
+Kd  0.988235 0.956863 0.909804
+Ks  0.900000 0.900000 0.900000
+d  1.000000
+Ns  1.900000
+illum 2
+map_Kd skin.png
+#
+# EOF

@@ -1,0 +1,12 @@
+# Max2Mtl Version 4.0 Mar 10th, 2001
+#
+newmtl 07_-_Default
+Ka  0.58823532 0.58823532 0.58823532
+Kd  0.58823532 0.58823532 0.58823532
+Ks  0.89999998 0.89999998 0.89999998
+d  1.00000000
+Ns  0.00000000
+illum 2
+map_Kd KonevCompleteMap.jpg
+#
+# EOF
